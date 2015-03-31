@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <h1>Challenge One</h1>
+    <div ng-controller="myCtrl">
+      <div>
+         
+         <p>Questions for Ryan:
+          <ul>
+            <li>I chose to ng-repeat by div and the div has a border. Notice the bottom of the box is "heavy" because it's the bottom of the top box and top of the bottom box. How would you best solve that so it's collapsed?</li>
+             </ul>
+          </p>
+         <div class="box" ng-repeat="month in months | orderBy: 'ordinal'" ng-class="{spring:month.season=='spring',summer:month.season=='summer',fall:month.season=='fall' }">
+             <h2>{{month.english}}</h2>
+             French Word: {{month.french}}<br />
+             Number of Days: {{month.days}} 
+           
+         </div>
+      </div>
+    </div>
+  </body>
+
+</html>

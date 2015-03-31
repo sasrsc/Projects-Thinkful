@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <h1>Challenge Three</h1>
+    <div ng-controller="oneController">
+    
+    <p>OK, Ryan, this has got me stumped because of the name/value pairs with the numeric names "1960" instead of "x1960". If I do "x1960" it works but "1960" fails. I created a test "testnum" object and the same occurs. The answer is country[1960] but where is that documented?
+      
+    </p>
+    <ul>
+      <li ng-repeat="x in testNum">
+        {{x.name}} - {{x.x123}}
+      </li>
+    </ul>
+          
+          <input type="text" ng-model="searchText" placeholder="Narrow down your search!">
+          <table>
+            <caption>Countries with Population every 10 years</caption>
+            <tr>
+              <th>Country Name</th>
+              <th>1960</th>
+              <th>1970</th>
+               <th>1980</th>
+              <th>1990</th>
+              <th>2000</th>
+              <th>2010</th>
+              <th>% change</th>
+            </tr>
+            <tr ng-repeat="country in countries | orderBy: 'name' | filter: searchText" ng-class-odd="'odd'" ng-class-even="'even'">
+
+              <td>{{country.name}}</td>
+              <td class="right">{{country[1960] | number}}</td>
+              <td class="right">{{country[1970] | number}}</td>
+              <td class="right">{{country[1980] | number}}</td>
+              <td class="right">{{country[1990] | number}}</td>
+              <td class="right">{{country[2000] | number}}</td>
+              <td class="right">{{country[2010] | number}}</td>
+              <td class="right">
+                <span ng-class="{positive:((country[2010] - country[1960])/country[1960]) > 0,negative:((country[2010] - country[1960])/country[1960]) <0 }">
+                   {{((country[2010] - country[1960])/country[1960])*100 | number: 2}}
+              </span>
+               </td>
+            </tr>
+            
+          </table>
+    </div>
+  </body>
+
+</html>

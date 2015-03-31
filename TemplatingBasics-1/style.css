@@ -1,0 +1,30 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+  font-family: Helvetica, Arial;
+}
+
+.box {
+  border: 1px #ccc solid;
+  padding: 5px;
+  border-collapse: collapse;
+
+}
+
+.spring {
+  background-color: green;
+}
+
+.summer {
+  background-color: orange;
+  
+}
+
+.fall {
+  background-color: brown;
+}
+
+h2 {
+  margin: 0px ;
+}

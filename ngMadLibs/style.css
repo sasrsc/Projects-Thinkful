@@ -1,0 +1,72 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+  font-family: Helvetica, Arial;
+}
+
+#content {
+	border: 1px solid black;
+	margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 20px;
+
+
+}
+
+#header {
+	border: 1px solid black;
+	height: 220px;
+	padding: 10px;
+}
+
+#words {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#letter {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+.col {
+	width: 200px;	
+	/*float: left;*/
+}
+
+.col > input {
+	margin: 10px 20px;
+}
+
+.logoSection {
+	float: left;
+	width: 30%;
+}
+
+.titleSection {
+	float: right;
+	width: 50%;
+	text-align: center;
+}
+
+.clearfix {
+	clear: both;
+}
