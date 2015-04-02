@@ -6,7 +6,7 @@ body {
 }
 
 #content {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -45,10 +45,12 @@ body {
 
 h1 {
 	font-size: 2em;
+	
 }
 
 .col {
 	width: 200px;	
+	display: inline;
 	/*float: left;*/
 }
 
@@ -57,12 +59,12 @@ h1 {
 }
 
 .logoSection {
-	float: left;
+	float:left;
 	width: 30%;
 }
 
 .titleSection {
-	float: right;
+	float: left;
 	width: 50%;
 	text-align: center;
 }
@@ -70,3 +72,46 @@ h1 {
 .clearfix {
 	clear: both;
 }
+
+.submitSection {
+	text-align: center;
+	font-weight: bold;
+	margin: 10px 0px;
+	
+	/*
+	margin-left: auto;
+    margin-right: auto;*/
+}
+
+.submitSection button {
+	color: #fff;
+  	background-color: #428bca;
+  	border-color: #357ebd;
+  	font-size: 1.25em;
+  	line-height: 1.33;
+  	border-radius: 6px;
+  	border: 1px solid transparent;
+  	vertical-align: middle;
+	white-space: nowrap;
+  }
+
+
+
+  input {
+  	border-radius: 4px;
+  	background-color: #fff;
+  	border: 1px solid #ccc;
+  	height: 34px;
+  	padding: 6px 12px;
+	font-size: 14px;
+	margin: 5px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	padding: 10px 16px;
+
+  }
+
+
+  .i  {
+  	display: inline-block;
+  	width: 230px;
+  }
