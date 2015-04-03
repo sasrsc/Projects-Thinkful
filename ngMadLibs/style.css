@@ -5,6 +5,18 @@ body {
   font-family: Helvetica, Arial;
 }
 
+label {
+    vertical-align: baseline;
+}
+
+.gender {
+	background-color: #ccc;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 4px;
+	margin-bottom: 10px;
+
+}
 #content {
 	/*border: 1px solid black;*/
 	margin-left: auto;

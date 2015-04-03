@@ -19,11 +19,18 @@
             </div>
           </div>
           <div id="words">
+
             <h2>Provide the following words:</h2>
             
             <form name="form" novalidate  class="css-form">
+
+        
             
             <div class="formSection">
+                <div class="gender">
+                <label><input type="radio" ng-model="formData.gender" id="Male" value="Male">Male</label>
+                <label><input type="radio" ng-model="formData.gender" value="Female">Female</label>
+                </div>
                 <div class="i">
                   <input type="text" ng-model="formData.femaleName" name="femaleName" placeholder="Female Name" required><img ng-src="checkmark.png" alt="OK" ng-show="form.femaleName.$valid">
                 </div>
@@ -78,7 +85,8 @@
           </div>
           <div>
             <h2>Mentor Comments:</h2>
-            <p>A few comments about the Lesson 3 challenge. As I didn't really have anything in ng-init before this controller version doesn't have much in it.</p>
+            <p>A few comments about the Lesson 3 challenge. As I didn't really have anything in ng-init before this controller version doesn't have much in it. Why doesn't the formdata below show up? It does if I do formData.gender. It was working before. It stopped working when I added $scope.formData=[]; to the controller.</p>
+            <p>How would you best center align the Male and Female labels with the radio button? </p>
 
             {{formData}}
           </div>
