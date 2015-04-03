@@ -28,11 +28,11 @@
             
             <div class="formSection">
                 <div class="gender">
-                <label><input type="radio" ng-model="formData.gender" id="Male" value="Male">Male</label>
-                <label><input type="radio" ng-model="formData.gender" value="Female">Female</label>
+                <label><input type="radio" ng-model="formData.gender" id="Male" value="Male" ng-click="genderAdjust();">Male</label>
+                <label><input type="radio" ng-model="formData.gender" value="Female" ng-click="genderAdjust();">Female</label>
                 </div>
                 <div class="i">
-                  <input type="text" ng-model="formData.femaleName" name="femaleName" placeholder="Female Name" required><img ng-src="checkmark.png" alt="OK" ng-show="form.femaleName.$valid">
+                  <input type="text" ng-model="formData.name" name="name" placeholder="Name" required><img ng-src="checkmark.png" alt="OK" ng-show="form.name.$valid">
                 </div>
                 
                 <div class="i">
@@ -79,8 +79,8 @@
             </form>
           </div>
           <div id="letter clearfix" ng-show="form.$submitted && form.$valid">
-            <p>{{formData.femaleName}} was a {{formData.jobTitle}} who loved technology. Although she loved parts of her job, she absolutely hated  {{formData.tediousTask}} and {{formData.dirtyTask}}. So, {{formData.femaleName}} met with her life mentor {{formData.celebrity}} who told her to learn how to {{formData.uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{formData.uselessSkill}} so she studied programming instead. </p>
-            <p>What a great decision! With her new skills, {{formData.femaleName}} built a(n) {{formData.adjective}} robot named {{formData.obnoxiousCelebrity}} that not only loved {{formData.dirtyTask}} but did it {{formData.hugeNumber}} faster. I was messing around with form validation errors but there's little point in this case as I'm not validating the language value/accuracy of the form data so I thought only displaying the submit value on $valid would suffice. I spent way too long trying to "not" use tables to do the layout and initially set the inputs into 3 columns. Best practice ideas for that would be nice please. In the end it's simply one flexible div section and singing {{formData.favoriteSong}}!</p>
+            <p>{{formData.name}} was a {{formData.jobTitle}} who loved technology. Although she loved parts of {{formData.hisher}} job, she absolutely hated  {{formData.tediousTask}} and {{formData.dirtyTask}}. So, {{formData.name}} met with {{formData.hisher}} life mentor {{formData.celebrity}} who told {{formData.hisher}} to learn how to {{formData.uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{formData.uselessSkill}} so she studied programming instead. </p>
+            <p>What a great decision! With {{formData.hisher}} new skills, {{formData.name}} built a(n) {{formData.adjective}} robot named {{formData.obnoxiousCelebrity}} that not only loved {{formData.dirtyTask}} but did it {{formData.hugeNumber}} faster. I was messing around with form validation errors but there's little point in this case as I'm not validating the language value/accuracy of the form data so I thought only displaying the submit value on $valid would suffice. I spent way too long trying to "not" use tables to do the layout and initially set the inputs into 3 columns. Best practice ideas for that would be nice please. In the end it's simply one flexible div section and singing {{formData.favoriteSong}}!</p>
 
           </div>
           <div>
