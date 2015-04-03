@@ -64,7 +64,7 @@
                             
             </div>
             <div class="submitSection" ng-show="form.$valid">
-              <button type="submit">We're ready to play! Click here to submit your words</button>
+              <button type="submit" ng-click="submit();">We're ready to play! Click here to submit your words</button>
                         
             </div>
 
@@ -78,7 +78,7 @@
           </div>
           <div>
             <h2>Mentor Comments:</h2>
-            <p>I'm not good at css so this won't be the prettiest output. Read form validation ideas on the angular js official site and also <a href="https://scotch.io/tutorials/angularjs-form-validation">here</a>. I did decide to put the values in a single object called formData. I don't know whether that's more efficient or not but I like the idea of submitting, capturing the values that way. I also wondered whether the "letter" section ng-show would work when the form.$submitted is outside of the &lt;/form&gt; section. I am purposely not using bootstrap in an effort to try and educate myself more with css. I am really struggling with the header section and how to properly handle that with re-sizing the window. Not really an Angular issue (more css, layout, etc...). I didn't use ng-init in this example. I understand that's not a production type thing you'd do. In this case, though what how were you thinking it would work. In the css I "content" section to center the page. Is that the best practice - I think I saw one example where the body was handling that css. I did hide the submit until all the values are complted. I originally was working on individual error messages but it seemed overkill. Also interested to hear your opinion on the css form layout... </p>
+            <p>A few comments about the Lesson 3 challenge. As I didn't really have anything in ng-init before this controller version doesn't have much in it.</p>
 
             {{formData}}
           </div>
