@@ -1,0 +1,92 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+  font-family: Helvetica, Arial;
+}
+
+label {
+    vertical-align: baseline;
+}
+
+
+#content {
+	/*border: 1px solid black;*/
+	margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 20px;
+
+
+}
+
+input {
+  	border-radius: 4px;
+  	background-color: #fff;
+  	border: 1px solid #ccc;
+  	height: 20px;
+  	padding: 5px;
+	font-size: 12px;
+	margin: 5px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	padding: 10px 16px;
+
+  }
+
+#header {
+	text-align: center;
+}
+
+#dataEntry {
+	border: 1px solid #ccc;
+	width: 55%;
+	height: 425px;
+
+	float: left;
+
+}
+
+#custCharges {
+	border: 1px solid #ccc;
+	width: 40%;
+	float: right;
+	height: 200px;
+	margin-bottom: 25px;
+	
+}
+
+#myEarnings {
+	border: 1px solid #ccc;
+	width: 40%;
+	float: right;
+	height: 200px;
+}
+
+h2 {
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	padding: 5px;
+}
+
+.text-right {
+	text-align: right;
+}
+
+#reset {
+	
+	position: absolute;
+	right: 100px;
+	top: 50%;
+
+}
+
+#mentor {
+	margin-top: 20px;
+}
+.error {
+	color: red;
+}
+
+.clearfix {
+	clear: both;
+}
