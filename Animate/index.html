@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Animate</h1>
+    <p>The goal is to make this plane below take off.</p>
+    <div class="takeoff">Q</div>
+    <p>The above version uses translate coordinates to takeoff and rotate at the same time. It's fine except 1) it's jerky - at each point it delays and I'm not sure how to avoid it. 2) I did include two animations Accel (accelerate and takeoff) and Op (gradually disappears) </p>
+    <div class="takeoff2">Q</div>
+    <p>In this one I have margin, height and color. This is when you <strong>Hover</strong> over the plane. I don't like this because it's jerky. I wonder why that is? </p>
+    <div class="takeoff3">Q</div>
+    <p>This was simply a first attempt at multiple animations without moving anywhere. What's a little weird is that you have to know that a attribute for background-color must be entered as color in the transition property value.</p>
+    <div class="box"><span class="takeoff4">Q</span></div>
+    <p>I just don't understand why the plane didn't move off the x axis. This was my first attempt at movement before I knew about translate.</p>
+  </body>
+
+</html>
