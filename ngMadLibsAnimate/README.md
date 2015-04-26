@@ -1,0 +1,3 @@
+◦The main requirement is that an animation should occur between the user clicking the "Generate my Mad Lib" button and the rendered Mad Lib being displayed. 
+◦Deliberately design and then implement your animations. Describe the animation you want in terms of a story, then figure out how to implement this with CSS and Angular (probably using keyframes).
+◦When you've completed this assignment, save and commit your changes and push up to both your master and gh-pages branch on Github. Share a link to your page with your fellow students and Mentor.

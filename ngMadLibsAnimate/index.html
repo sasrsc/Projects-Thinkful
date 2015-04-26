@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular-messages.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.2.18/angular-animate.min.js"></script>
+    <title>ngMadLibs Challenge Lesson 3 Task 5</title>
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+      <div id="content">
+          <div id="header">
+            <div class="logoSection">
+              <img src="mad-lib-happy-face.png"/>
+            </div>
+            <div class="titleSection">
+              <img src="ng-mad-libs-logo.png"/>
+              <h1>Automate This!</h1>
+            </div>
+          </div>
+          <div id="words" ng-show="visible" ng-hide="form.$submitted && form.$valid">
+            <h2>Provide the following words:</h2>
+            
+            <form name="form" novalidate  class="css-form">
+            
+            <div class="formSection" >
+                <div class="i">
+                  <input type="text" ng-model="formData.femaleName" name="femaleName" placeholder="Female Name" required><img ng-src="checkmark.png" alt="OK" ng-show="form.femaleName.$valid">
+                </div>
+                
+                <div class="i">
+                  <input type="text" ng-model="formData.tediousTask" name="tediousTask" placeholder="Tedious Task" required ><img ng-src="checkmark.png" alt="OK" ng-show="form.tediousTask.$valid">
+                </div>
+                
+                <div class="i">
+                  <input type="text" ng-model="formData.dirtyTask" name="dirtyTask" placeholder="Dirty Task" required ><img ng-src="checkmark.png" alt="OK" ng-show="form.dirtyTask.$valid">
+                </div>
+                
+                <div class="i">
+                  <input type="text" ng-model="formData.celebrity" name="celebrity"  placeholder="Celebrity" required ><img ng-src="checkmark.png" alt="OK" ng-show="form.celebrity.$valid">
+                </div>
+
+
+                <div class="i">
+                  <input type="text" ng-model="formData.uselessSkill" name="uselessSkill"  placeholder="Useless Skill" required ><img ng-src="checkmark.png" alt="OK" ng-show="form.uselessSkill.$valid">
+                </div>
+
+                <div class="i">
+                  <input type="text" ng-model="formData.obnoxiousCelebrity" name="obnoxiousCelebrity"  placeholder="Obnoxious Celebrity" required ><img ng-src="checkmark.png" alt="OK" ng-show="form.obnoxiousCelebrity.$valid">
+                </div>
+
+                <div class="i">
+                  <input type="text" ng-model="formData.adjective" name="adjective"  placeholder="Adjective" required ><img ng-src="checkmark.png" alt="OK" ng-show="form.adjective.$valid">
+                </div>
+
+                <div class="i">
+                  <input type="number" ng-model="formData.hugeNumber" name="hugeNumber"  placeholder="Huge Number" required min="1000"><img ng-src="checkmark.png" alt="OK" ng-show="form.hugeNumber.$valid">
+
+                 
+                    <span class="error" ng-if="form.$submitted && form.hugeNumber.$invalid && form.hugeNumber.$dirty">C'mon you can think higher than this</span>
+                 
+                  error={{form.hugeNumber.$error}}
+                  dirty={{form.hugeNumber.$dirty}}
+                  pristine={{form.hugeNumber.$pristine}}
+                  valid={{form.$valid}}
+
+
+                </div>
+
+                <div class="i">
+                  <input type="text" ng-model="formData.favoriteSong" name="favoriteSong"  placeholder="Favorite Song" required ><img ng-src="checkmark.png" alt="OK" ng-show="form.favoriteSong.$valid">
+                </div>
+
+                            
+            </div>
+            <div class="submitSection" ng-show="form.$valid">
+              <button type="submit" ng-click="toggle();submit(formData);">We're ready to play! Click here to submit your words</button>
+                        
+            </div>
+
+            
+            </form>
+          </div>
+          <div id="letter clearfix" ng-hide="visible">
+            <p>{{formData.femaleName}} was a {{formData.jobTitle}} who loved technology. Although she loved parts of her job, she absolutely hated  {{formData.tediousTask}} and {{formData.dirtyTask}}. So, {{formData.femaleName}} met with her life mentor {{formData.celebrity}} who told her to learn how to {{formData.uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{formData.uselessSkill}} so she studied programming instead. </p>
+            <p>What a great decision! With her new skills, {{formData.femaleName}} built a(n) {{formData.adjective}} robot named {{formData.obnoxiousCelebrity}} that not only loved {{formData.dirtyTask}} but did it {{formData.hugeNumber}} faster. I was messing around with form validation errors but there's little point in this case as I'm not validating the language value/accuracy of the form data so I thought only displaying the submit value on $valid would suffice. I spent way too long trying to "not" use tables to do the layout and initially set the inputs into 3 columns. Best practice ideas for that would be nice please. In the end it's simply one flexible div section and singing {{formData.favoriteSong}}!</p>
+            <div>
+              <button ng-click="toggle();reset();" class="right2">Do over!</button>
+            </div>
+            
+
+          </div>
+          <div class="mentor clearfix">
+            <h2>Mentor Comments:</h2>
+            <p>why does the {} below not show the values because it's an []?. I am struggling with the placement of the reset button. I don't understand why the button doesn't have a bottom margin. I used a sneeky way of reseting the values after reading some post in stackoverflow and the <a href="https://docs.angularjs.org/api/ng/function/angular.copy">angular docs</a>. I am stuck as to how and the best way to remove the $error message on the huge number field if you submit it and it's invalid and get the error and then reset back to the words page the error message remains. I didn't want to spend too much time figuring it out as I want to move so let's discuss in mentor time.</p>
+
+            <p>formData={{formData | json}}</p>
+           
+            <p>Initial={{initial | json}}</p>
+          </div>
+
+
+
+      </div>     
+
+  </body>
+
+</html>

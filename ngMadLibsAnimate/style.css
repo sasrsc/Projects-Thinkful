@@ -1,0 +1,134 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+  font-family: Helvetica, Arial;
+}
+
+#content {
+	/*border: 1px solid black;*/
+	margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 20px;
+
+
+}
+
+#header {
+	border: 1px solid black;
+	height: 220px;
+	padding: 10px;
+}
+
+#words {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#letter {
+	border: 1px solid black;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.right2 {
+	float: right;
+	display: inline-block;
+}
+
+.center {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	
+}
+
+.col {
+	width: 200px;	
+	display: inline;
+	/*float: left;*/
+}
+
+.col > input {
+	margin: 10px 20px;
+}
+
+.logoSection {
+	float:left;
+	width: 30%;
+}
+
+.titleSection {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.submitSection {
+	text-align: center;
+	font-weight: bold;
+	margin: 10px 0px;
+	
+	/*
+	margin-left: auto;
+    margin-right: auto;*/
+}
+
+.submitSection button {
+	color: #fff;
+  	background-color: #428bca;
+  	border-color: #357ebd;
+  	font-size: 1.25em;
+  	line-height: 1.33;
+  	border-radius: 6px;
+  	border: 1px solid transparent;
+  	vertical-align: middle;
+	white-space: nowrap;
+  }
+
+
+
+  input {
+  	border-radius: 4px;
+  	background-color: #fff;
+  	border: 1px solid #ccc;
+  	height: 34px;
+  	padding: 6px 12px;
+	font-size: 14px;
+	margin: 5px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	padding: 10px 16px;
+
+  }
+
+
+  .i  {
+  	display: inline-block;
+  	width: 230px;
+  }
+
+  .mentor {
+  	margin-top: 20px;
+  	padding: 10px;
+	border: 1px solid #ccc;
+	background-color: #dbdbdb;
+  }
+
+  .error {
+  	color: red;
+  }
