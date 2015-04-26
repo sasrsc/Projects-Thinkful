@@ -1,0 +1,91 @@
+header {
+	width: 35em;
+	margin-left: auto;
+	margin-right: auto;
+}
+header > img {
+	display: block;
+	width: 30em;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+form {
+	/*display: inline-block;*/
+	margin-top: 20px;
+	text-align: center;
+	width: 35em;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.imgs {
+	width: 310px;
+	margin: 10px;
+	display: inline-block;
+}
+
+.instagram {
+	text-align: center;
+	width: 80%;
+	margin: 5px auto;
+}
+
+
+.error {
+	color: red;
+	font-size: 4em;
+}
+
+
+.fadein {
+	margin: 10px;
+  padding:10px;
+  border:1px solid black;
+  background:white;	
+}
+
+.fadein {
+  -webkit-transition:all linear 2.5s;
+  transition:all linear 1.5s;
+}
+
+.fadein.ng-hide {
+  opacity:0;
+}
+
+button {
+	margin: 10px 0px;
+}
+
+.repeated-item.ng-enter, .repeated-item.ng-move {
+  -webkit-transition:5.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:5.5s linear all;
+  opacity:0;
+}
+
+.repeated-item.ng-enter.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+  opacity:1;
+}
+
+.repeated-item.ng-leave {
+  -webkit-animation:5.0s my_animation;
+  -moz-animation:0.5s my_animation;
+  -o-animation:0.5s my_animation;
+  animation:5.5s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-webkit-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}

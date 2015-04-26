@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Instagram</title>
+	
+	<script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular-messages.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.10/angular-animate.min.js"></script>
+
+
+   
+    <script type="text/javascript" src="script.js"></script>
+   
+	<link rel="stylesheet" href="custom.css">
+</head>
+<body ng-app="myApp" ng-controller="myController">
+	<header><img src="ng-instagram.png" alt="Instagram Logo">
+	</header>
+
+	<form name="myForm" novalidate>
+		<input type="text" required ng-minlength="2" name="tag" ng-model="tag" placeholder="Enter a tag to search">
+		<div ng-messages="myForm.tag.$error && myForm.$submitted" style="color:maroon" role="alert">
+	    	<div ng-message="required">You did not enter a value silly!</div>
+	    	<div ng-message="minlength">Your value is too short</div>
+	  	</div>
+		
+		<button ng-show="myForm.$valid" ng-click="submit()">Submit</button>
+
+
+		<div ng-show="myForm.$submitted" class="fadein">I am now searching for "{{tag}}"
+			<pre>myForm.tag.$error = {{ myForm.tag.$error | json }} - search={{search}}</pre>
+			<input type="text" name="likes" ng-model="searchText.likes.count" >
+		</div>
+	</form>
+
+	<div ng-show="error" class="error">Uh oh - something is up!!</div>
+	
+	<div ng-show="instagram" class="instagram">
+		<p>We found {{instagram.length}} results for {{search}}</p>
+		<div class="imgs repeated-item" ng-repeat="img in instagram | filter: searchText">
+			<img ng-src="{{img.images.low_resolution.url}}" alt="{{tag}}">
+		</div>
+	</div>
+
+	
+
+
+
+<div class="mentor">
+<ul>
+	<li>animate</li>
+	<li>http</li>
+</ul>
+<p>I'm using ngMessages here although it's overkill in this one case. I just want to get more accustomed to using them. Can we talk about the filter I did I want to better understand this... likes.count is an property of 
+<pre>likes: Object
+count: 0</pre> So I created an input text field ng for -model="likes.count" and referenced that in the filter filter: likes - so why wouldn't it show the images that have specifically those counts? I did delete the animation to see if that was affecting it but it's not. I figured it out by copying the example <a href="https://docs.angularjs.org/api/ng/filter/filter">here</a>. </p>
+
+</div>
+</body>
+</html>
